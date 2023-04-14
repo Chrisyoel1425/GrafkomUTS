@@ -31,7 +31,7 @@ public class MainPlanet {
         GL.createCapabilities();
         // code dst jangan ditaruh diatas code diatas
         camera.setPosition(0, 0, 1.5f);
-        camera.setRotation((float) Math.toRadians(0.0f), (float) Math.toRadians(10.0f));
+        camera.setRotation((float) Math.toRadians(0.0f), (float) Math.toRadians(1.0f));
 
         //Matahari
         TTSRY.add(new Sphere2(
@@ -275,7 +275,10 @@ public class MainPlanet {
         if(window.isKeyPressed(GLFW_KEY_G)){
 
             TTSRY.get(0).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,0.0f);
-            TTSRY.get(1).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,0.0f);
+            Vector3f p1 = TTSRY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+            TTSRY.get(1).translateObject(-p1.x, -p1.y, 0f);
+            TTSRY.get(1).rotateObject((float) Math.toRadians(0.5f),1.0f,0.0f,0.0f);
+            TTSRY.get(1).translateObject(p1.x, p1.y, 0f);
             TTSRY.get(2).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,0.0f);
             TTSRY.get(3).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,0.0f);
             TTSRY.get(4).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,0.0f);
@@ -286,7 +289,7 @@ public class MainPlanet {
             TTSRY.get(5).translateObject(-moon.x,-moon.y,0f);
             TTSRY.get(5).rotateObject((float) Math.toRadians(0.8f),0f,0f,1f);
             TTSRY.get(5).translateObject(moon.x,moon.y,0f);
-            camera.moveForward(0.001f);
+            camera.moveForward(0.00000001f);
             TTSRY.get(0).rotateObject((float) Math.toRadians(1.0f), 0.0f, 1.0f, 0.0f);
         }
 
