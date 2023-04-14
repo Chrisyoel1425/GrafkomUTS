@@ -19,7 +19,7 @@ public class Sphere2 extends Circle3d{
         this.rZ = rZ;
         this.stackCount = stackCount;
         this.sectorCount = sectorCount;
-        createSphere2();
+        createSphere();
         //createHyperboloid1();
         //createHyperboloid2();
         //createEllipticCone();

@@ -242,7 +242,7 @@ public class MainPlanet {
     boolean cek = false;
     boolean drag = false;
     int noHold = 0;
-    Circle temp;
+
     boolean collisionFree = true;
     double jarak;
     ArrayList<Sphere2> TTSRY = new ArrayList<>();
@@ -286,6 +286,12 @@ public class MainPlanet {
             TTSRY.get(5).translateObject(-moon.x,-moon.y,0f);
             TTSRY.get(5).rotateObject((float) Math.toRadians(0.8f),0f,0f,1f);
             TTSRY.get(5).translateObject(moon.x,moon.y,0f);
+            camera.moveForward(0.001f);
+            TTSRY.get(0).rotateObject((float) Math.toRadians(1.0f), 0.0f, 1.0f, 0.0f);
+        }
+
+        if(window.isKeyPressed(GLFW_KEY_E)){
+            camera.moveBackwards(0.001f);
         }
 
         if(window.isKeyPressed(GLFW_KEY_W)){
