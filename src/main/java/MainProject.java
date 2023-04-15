@@ -47,7 +47,7 @@ public class MainProject {
                 new Vector4f(0.0f, 1.0f, 0.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
-                0.3f, 0.3f, 0.3f,
+                0.2f, 0.2f, 0.2f,
                 30, 15, 8
         ));
         pY.get(0).translateObject(0.0f, 0.5f, 0.0f);
@@ -66,7 +66,39 @@ public class MainProject {
                 0.15f, 0.3f, 0.15f,
                 30, 15, 1
         ));
-        pY.get(0).translateObject(0.0f, 0.0f, 0.0f);
+        pY.get(1).translateObject(0.0f, 0.0f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 0.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.03f, 0.03f, 0.03f,
+                30, 15, 8
+        ));
+        pY.get(2).translateObject(-0.08f, 0.5f, 0.18f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 0.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.03f, 0.03f, 0.03f,
+                30, 15, 8
+        ));
+        pY.get(3).translateObject(0.08f, 0.5f, 0.18f);
     }
 
     public void input() {
@@ -80,7 +112,14 @@ public class MainProject {
         //ISI COMMENT MAU APA AJA
         if(window.isKeyPressed(GLFW_KEY_F)){
             pY.get(1).rotateObject((float) Math.toRadians(0.5f),1f,0.0f,0.0f);
-//            camera.moveForward(0.01f);
+            Vector3f head = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+            pY.get(2).translateObject(-head.x, -head.y, 0.0f);
+            pY.get(3).translateObject(-head.x, -head.y, 0.0f);
+            pY.get(2).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(3).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(2).translateObject(head.x, head.y, 0.0f);
+            pY.get(3).translateObject(head.x, head.y, 0.0f);
+//            camera.moveForward(0.001f);
         }
         if(window.isKeyPressed(GLFW_KEY_G)){
 //            camera.moveBackwards(0.01f);
