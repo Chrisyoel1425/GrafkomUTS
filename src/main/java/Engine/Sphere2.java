@@ -46,7 +46,7 @@ public class Sphere2 extends Circle3d{
             createHyperboloid2();
         }
         else if(pilihan == 5){
-            createEllipticConev2();
+            createEllipticCone();
         }
         else if(pilihan == 6){
             createEllipticParaboloid();
@@ -227,7 +227,7 @@ public class Sphere2 extends Circle3d{
             }
         }
         for (double v = -Math.PI / 2; v <= Math.PI / 2; v += Math.PI / 60) {
-            for (double u = -Math.PI / 2; u <= 3 * (Math.PI / 2); u += Math.PI / 60) {
+            for (double u = -Math.PI / 2; u <= 4 * (Math.PI / 2); u += Math.PI / 60) {
                 float x = -0.5f * (float) ((Math.tan(v)) * Math.cos(u));
                 float y = -0.5f * (float) ((Math.tan(v)) * Math.sin(u));
                 float z = -0.5f * (float) (1 / Math.cos(v));

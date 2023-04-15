@@ -26,6 +26,7 @@ public class MainProject {
     Projection projection = new Projection(window.getWidth(), window.getHeight());
     Camera camera = new Camera();
     ArrayList<Sphere2> pY = new ArrayList<>();
+    ArrayList<Sphere2> pZ = new ArrayList<>();
 
     public void init() {
         window.init();
@@ -44,29 +45,13 @@ public class MainProject {
                                 "resources/scene.frag", GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(),
-                new Vector4f(0.0f, 1.0f, 0.0f, 1.0f),
-                0.5,
-                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
-                0.2f, 0.2f, 0.2f,
-                30, 15, 8
-        ));
-        pY.get(0).translateObject(0.0f, 0.5f, 0.0f);
-
-        pY.add(new Sphere2(
-                Arrays.asList(
-                        new ShaderProgram.ShaderModuleData(
-                                "resources/scene.vert", GL_VERTEX_SHADER),
-                        new ShaderProgram.ShaderModuleData(
-                                "resources/scene.frag", GL_FRAGMENT_SHADER)
-                ),
-                new ArrayList<>(),
                 new Vector4f(1.0f, 0.0f, 0.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
                 0.15f, 0.3f, 0.15f,
                 30, 15, 1
         ));
-        pY.get(1).translateObject(0.0f, 0.0f, 0.0f);
+        pY.get(0).translateObject(0.0f, 0.18f, 0.0f);
 
         pY.add(new Sphere2(
                 Arrays.asList(
@@ -76,7 +61,23 @@ public class MainProject {
                                 "resources/scene.frag", GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(),
-                new Vector4f(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.2f, 0.2f, 0.2f,
+                30, 15, 8
+        ));
+        pY.get(1).translateObject(0.0f, 0.5f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.0f, 0.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
                 0.03f, 0.03f, 0.03f,
@@ -92,7 +93,7 @@ public class MainProject {
                                 "resources/scene.frag", GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(),
-                new Vector4f(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4f(0.0f, 0.0f, 0.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
                 0.03f, 0.03f, 0.03f,
@@ -111,8 +112,8 @@ public class MainProject {
 
         //ISI COMMENT MAU APA AJA
         if(window.isKeyPressed(GLFW_KEY_F)){
-            pY.get(1).rotateObject((float) Math.toRadians(0.5f),1f,0.0f,0.0f);
-            Vector3f head = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+//            pY.get(1).rotateObject((float) Math.toRadians(0.5f),1f,0.0f,0.0f);
+            Vector3f head = pY.get(1).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
             pY.get(2).translateObject(-head.x, -head.y, 0.0f);
             pY.get(3).translateObject(-head.x, -head.y, 0.0f);
             pY.get(2).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
@@ -123,10 +124,20 @@ public class MainProject {
         }
         if(window.isKeyPressed(GLFW_KEY_G)){
 //            camera.moveBackwards(0.01f);
-//            pY.get(0).rotateObject((float) Math.toRadians(0.5f),0.0f,1.0f,0.0f);
+            Vector3f body = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+            pY.get(1).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(2).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(3).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(0).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(1).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(2).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(3).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(1).translateObject(body.x, body.y, 0.0f);
+            pY.get(2).translateObject(body.x, body.y, 0.0f);
+            pY.get(3).translateObject(body.x, body.y, 0.0f);
         }
         if(window.isKeyPressed(GLFW_KEY_H)){
-            pY.get(0).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,1.0f);
+            camera.moveForward(0.001f);
         }
     }
 
@@ -134,7 +145,7 @@ public class MainProject {
 
         while (window.isOpen()) {
             window.update();
-            glClearColor(0.00f, 0.0f, 0.0f, 0.0f); // RapidTables.com (RGB color code chart)
+            glClearColor(0.152f, 0.96f, 0.235f, 1.0f); // RapidTables.com (RGB color code chart)
             GL.createCapabilities();
             input();
 //            for (Sphere2 object : TTSRY) {
@@ -142,6 +153,9 @@ public class MainProject {
 //            }
             for(Sphere2 obj : pY){
                 obj.draw(camera, projection);
+            }
+            for(Sphere2 obj : pZ){
+                obj.drawLine(camera, projection);
             }
             //Restore State
             glDisableVertexAttribArray(0);

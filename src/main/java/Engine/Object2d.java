@@ -126,6 +126,25 @@ public class Object2d extends ShaderProgram{
         }
     }
 
+    public void drawLine(Camera camera, Projection projection){
+        drawSetup(camera, projection);
+        //optional
+        glLineWidth(1); //Ketebalan Garis
+        glPointSize(1); // Ngatur besar kecile vertex
+        //wajib
+        //GL_LINE
+        //GL_LINE_STRIP
+        //GL_LINE_LOOP
+        //GL_TRIANGLES
+        //GL_TRIANGLE_FAN
+        //GL_POINT
+        glDrawArrays(GL_LINE_STRIP, 0, vertices.size());
+
+        for(Object2d child : childObject){
+            child.draw(camera, projection);
+        }
+    }
+
     public void addVertices(Vector3f newVertices){
         vertices.add(newVertices);
         setupVAOVBO();
