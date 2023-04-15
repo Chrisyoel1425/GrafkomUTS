@@ -119,7 +119,7 @@ public class Object2d extends ShaderProgram{
         //GL_TRIANGLES
         //GL_TRIANGLE_FAN
         //GL_POINT
-        glDrawArrays(GL_LINE_STRIP, 0, vertices.size());
+        glDrawArrays(GL_POLYGON, 0, vertices.size());
 
         for(Object2d child : childObject){
             child.draw(camera, projection);

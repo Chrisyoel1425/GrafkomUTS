@@ -28,6 +28,44 @@ public class Sphere2 extends Circle3d{
         setupVAOVBO();
     }
 
+    public Sphere2(List<ShaderProgram.ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color, double r, ArrayList<Float> centerPoint, float rX, float rY, float rZ, int stackCount, int sectorCount, int pilihan) {
+        super(shaderModuleDataList, vertices, color, centerPoint, rX, rY);
+        this.rZ = rZ;
+        this.stackCount = stackCount;
+        this.sectorCount = sectorCount;
+        if(pilihan == 1){
+            createBox();
+        }
+        else if(pilihan == 2) {
+            createSphere();
+        }
+        else if(pilihan == 3){
+            createHyperboloid1();
+        }
+        else if(pilihan == 4){
+            createHyperboloid2();
+        }
+        else if(pilihan == 5){
+            createEllipticConev2();
+        }
+        else if(pilihan == 6){
+            createEllipticParaboloid();
+        }
+        else if(pilihan == 7){
+            createHyperboloidParaboloid();
+        }
+        else if(pilihan == 8){
+            createSphere2();
+        }
+        //createSphere();
+        //createHyperboloid1();
+        //createHyperboloid2();
+        //createEllipticCone();
+        //createEllipticParaboloid();
+        //createHyperboloidParaboloid();
+        setupVAOVBO();
+    }
+
     public void createBox()
     {
         Vector3f temp = new Vector3f();
@@ -290,13 +328,6 @@ public class Sphere2 extends Circle3d{
         }
         vertices = temp;
     }*/
-//    public void draw(){
-//        drawSetup();
-//        glLineWidth(1);
-//        glPointSize(1);
-//        glDrawArrays(GL_LINE_STRIP,0,vertices.size());
-//    }
-
 
 }
 

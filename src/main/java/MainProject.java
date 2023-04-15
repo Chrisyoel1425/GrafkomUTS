@@ -25,16 +25,48 @@ public class MainProject {
 
     Projection projection = new Projection(window.getWidth(), window.getHeight());
     Camera camera = new Camera();
+    ArrayList<Sphere2> pY = new ArrayList<>();
 
     public void init() {
         window.init();
         GL.createCapabilities();
         // code dst jangan ditaruh diatas code diatas
-        camera.setPosition(0, 0, 1.5f);
-        camera.setRotation((float) Math.toRadians(0.0f), (float) Math.toRadians(10.0f));
+        camera.setPosition(0, 0.0f, 2f);
+        camera.setRotation((float) Math.toRadians(0.0f), (float) Math.toRadians(3.0f));
 
 
         //ISI CODINGAN
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 1.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.3f, 0.3f, 0.3f,
+                30, 15, 8
+        ));
+        pY.get(0).translateObject(0.0f, 0.5f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.15f,
+                30, 15, 1
+        ));
+        pY.get(0).translateObject(0.0f, 0.0f, 0.0f);
     }
 
     public void input() {
@@ -46,6 +78,17 @@ public class MainProject {
         );
 
         //ISI COMMENT MAU APA AJA
+        if(window.isKeyPressed(GLFW_KEY_F)){
+            pY.get(1).rotateObject((float) Math.toRadians(0.5f),1f,0.0f,0.0f);
+//            camera.moveForward(0.01f);
+        }
+        if(window.isKeyPressed(GLFW_KEY_G)){
+//            camera.moveBackwards(0.01f);
+//            pY.get(0).rotateObject((float) Math.toRadians(0.5f),0.0f,1.0f,0.0f);
+        }
+        if(window.isKeyPressed(GLFW_KEY_H)){
+            pY.get(0).rotateObject((float) Math.toRadians(0.5f),0.0f,0.0f,1.0f);
+        }
     }
 
     public void loop() {
@@ -58,6 +101,9 @@ public class MainProject {
 //            for (Sphere2 object : TTSRY) {
 //                object.draw(camera, projection);
 //            }
+            for(Sphere2 obj : pY){
+                obj.draw(camera, projection);
+            }
             //Restore State
             glDisableVertexAttribArray(0);
             // Pull for window events
