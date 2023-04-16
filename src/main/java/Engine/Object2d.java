@@ -4,6 +4,7 @@ import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 
+import java.nio.FloatBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import static org.lwjgl.opengl.GL15.*;
@@ -28,6 +29,7 @@ public class Object2d extends ShaderProgram{
     //BARU 03-20-2023
     private List<Object2d> childObject;
     private List<Float> centerPoint;
+//    private double degree;
     public Object2d(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color) {
         super(shaderModuleDataList);
         this.vertices = vertices;
@@ -185,6 +187,7 @@ public class Object2d extends ShaderProgram{
         for(Object2d child : childObject){
             child.rotateObject(degree, x, y, z);
         }
+
     }
 
     public void scaleObject(float scaleX, float scaleY, float scaleZ){
@@ -228,5 +231,16 @@ public class Object2d extends ShaderProgram{
     public void setCenterPoint(List<Float> centerPoint) {
         this.centerPoint = centerPoint;
     }
+
+//    public double getDegree(){
+//        return Math.toRadians(degree);
+//    }
+//    public void setDegree(double degree){
+//        this.degree = degree;
+//    }
+
+//    public boolean getDegree(double toRadians) {
+//        return true;
+//    }
 }
 
