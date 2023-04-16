@@ -63,6 +63,9 @@ public class Sphere2 extends Circle3d{
         else if(pilihan == 10){
             createSphere4();
         }
+        else if(pilihan == 11){
+            createMouth();
+        }
         //createSphere();
         //createHyperboloid1();
         //createHyperboloid2();
@@ -163,6 +166,24 @@ public class Sphere2 extends Circle3d{
         vertices.add(tempVertices.get(2));
         vertices.add(tempVertices.get(7));
         vertices.add(tempVertices.get(6));
+    }
+
+    public void createMouth() {
+        vertices.clear();
+        ArrayList<Vector3f> temp = new ArrayList<>();
+
+        float x, y, z;
+        float r1 = rX * 0.8f;
+        float r2 = rY * 0.5f;
+
+        for (double u = -Math.PI / 2; u <= Math.PI / 2; u += Math.PI / 180) {
+            x = r1 * (float) (Math.cos(u));
+            y = r2 * (float) (Math.sin(u)) + rY * 0.5f;
+            z = 0.0f;
+            temp.add(new Vector3f(x, y, z));
+        }
+
+        vertices = temp;
     }
 
     public void createSphere(){

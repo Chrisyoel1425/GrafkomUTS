@@ -27,6 +27,7 @@ public class MainProject {
     Camera camera = new Camera();
     ArrayList<Sphere2> pY = new ArrayList<>(); //YOEL
     ArrayList<Sphere2> pH = new ArrayList<>(); //HADI
+    ArrayList<Sphere2> pJ = new ArrayList<>(); //Jessica
     ArrayList<Object2d> pZ = new ArrayList<>(); //ENVIRONMENT
     ArrayList<Object2d> pX = new ArrayList<>();
 
@@ -56,6 +57,102 @@ public class MainProject {
         ));
         pZ.get(0).translateObject(0.9f, 0.5f, -2f);
 
+        pZ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(0).getChildObject().get(0).translateObject(0.8f, 0.0f, -1.8f);
+
+        pZ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(0).getChildObject().get(1).translateObject(1f, 0.0f, -1.8f);
+
+        pZ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(0).getChildObject().get(2).translateObject(0.8f, 0.4f, -1.8f);
+
+        pZ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(0).getChildObject().get(3).translateObject(1f, 0.4f, -1.8f);
+
+        pZ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(0).getChildObject().get(4).translateObject(0.8f, 0.8f, -1.8f);
+
+        pZ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.3f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(0).getChildObject().get(5).translateObject(1f, 0.8f, -1.8f);
+
         pZ.add(new Sphere2(
                 Arrays.asList(
                         new ShaderProgram.ShaderModuleData(
@@ -71,6 +168,103 @@ public class MainProject {
                 30, 15, 1
         ));
         pZ.get(1).translateObject(-0.9f, 0.5f, -2f);
+
+        pZ.get(1).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.38f, 0.15f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(1).getChildObject().get(0).translateObject(-0.9f, 0.0f, -1.8f);
+
+        pZ.get(1).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.38f, 0.15f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(1).getChildObject().get(1).translateObject(-0.9f, 0.2f, -1.8f);
+
+        pZ.get(1).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.38f, 0.15f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(1).getChildObject().get(2).translateObject(-0.9f, 0.4f, -1.8f);
+
+        pZ.get(1).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.38f, 0.15f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(1).getChildObject().get(3).translateObject(-0.9f, 0.6f, -1.8f);
+
+        pZ.get(1).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.38f, 0.15f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(1).getChildObject().get(4).translateObject(-0.9f, 0.8f, -1.8f);
+
+        pZ.get(1).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.38f, 0.15f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(1).getChildObject().get(5).translateObject(-0.9f, 1.0f, -1.8f);
+
 
         pZ.add(new Sphere2(
                 Arrays.asList(
@@ -88,6 +282,39 @@ public class MainProject {
         ));
         pZ.get(2).translateObject(0.9f, 0.5f, -4f);
 
+        pZ.get(2).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.03f, 1.2f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(2).getChildObject().get(0).translateObject(1f, 0.5f, -3.8f);
+
+
+        pZ.get(2).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.03f, 1.2f, 0.05f,
+                30, 15, 1
+        ));
+        pZ.get(2).getChildObject().get(1).translateObject(0.8f, 0.5f, -3.8f);
+
         pZ.add(new Sphere2(
                 Arrays.asList(
                         new ShaderProgram.ShaderModuleData(
@@ -96,13 +323,62 @@ public class MainProject {
                                 "resources/scene.frag", GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(),
-                new Vector4f(0.517f, 0.478f, 0.494f, 1.0f),
+                new Vector4f(0.0f, 0.0f, 1.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
-                0.5f, 2f, 0.5f,
+                0.5f, 1f, 0.5f,
                 30, 15, 1
         ));
-        pZ.get(3).translateObject(-0.9f, 0.8f, -4f);
+        pZ.get(3).translateObject(-0.9f, 0.3f, -4f);
+
+        pZ.get(3).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.2f, 0.2f, 0.15f,
+                30, 15, 9
+        ));
+        pZ.get(3).getChildObject().get(0).translateObject(-0.925f, 0.8f, -4.0f);
+
+//        pZ.add(new Sphere2(
+//                Arrays.asList(
+//                        new ShaderProgram.ShaderModuleData(
+//                                "resources/scene.vert", GL_VERTEX_SHADER),
+//                        new ShaderProgram.ShaderModuleData(
+//                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+//                ),
+//                new ArrayList<>(),
+//                new Vector4f(1.0f, 0.0f, 1.0f, 1.0f),
+//                0.5,
+//                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+//                10f, 10f, 10f,
+//                30, 15, 1
+//        ));
+//        pZ.get(4).translateObject(0.0f, -5.2f, -4f);
+
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.35f, 0.3f, 0.2f,
+                15, 30, 11
+        ));
+        pY.get(0).rotateObject(4.75f, 0f, 0f, 1f);
         //YOEL
         //BADAN
 //        pY.add(new Sphere2(
@@ -938,6 +1214,265 @@ public class MainProject {
         ));
         pH.get(33).translateObject(-0.15f, -0.13f, -0.16f);
 
+
+        //Jessica
+        //Badan
+        //tengah
+        pJ.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.49f, 0.34f, 0.0f,
+                30, 15, 1
+        ));
+        pJ.get(0).translateObject(0.599f, -0.2f, 0.0f);
+
+        //atas
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(   1.0f, 1.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.25f, 0.25f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(0).translateObject(0.6f, 0.0f, 0.0f);
+
+        //bawah
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(   0.0f, 0.20f, 0.44f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.255f, 0.15f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(1).translateObject(0.6f, -0.45f, 0.0f);
+
+        //kacamata
+        //bagian hitam
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.4f, 0.1f, 0.0f,
+                30, 15, 1
+        ));
+        pJ.get(0).getChildObject().get(2).translateObject(0.49f, -0.04f, 0.35f);
+
+        //buletan kiri
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.49f, 0.49f, 0.49f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.08f, 0.08f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(3).translateObject(0.39f, -0.045f, 0.45f);
+
+        //buletan kanan
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.49f, 0.49f, 0.49f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.08f, 0.08f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(4).translateObject(0.53f, -0.045f, 0.45f);
+
+
+        //mata luar kiri
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.06f, 0.06f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(5).translateObject(0.37f, -0.045f, 0.5f);
+
+        //mata luar kanan
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.06f, 0.06f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(6).translateObject(0.52f, -0.045f, 0.5f);
+
+        //mata dalam kiri
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.03f, 0.03f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(7).translateObject(0.36f, -0.045f, 0.55f);
+
+        //mata dalem kanan
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.03f, 0.03f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(8).translateObject(0.51f, -0.045f, 0.55f);
+
+        //celana
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.20f, 0.44f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.4f, 0.1f, 0.0f,
+                30, 15, 1
+        ));
+        pJ.get(0).getChildObject().get(9).translateObject(0.5f, -0.3f, 0.35f);
+
+        //kaki kiri
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.20f, 0.44f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.1f, 0.15f, 0.0f,
+                30, 15, 1
+        ));
+        pJ.get(0).getChildObject().get(10).translateObject(0.4f, -0.5f, 0.35f);
+
+        //kaki kanan
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.20f, 0.44f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.1f, 0.15f, 0.0f,
+                30, 15, 1
+        ));
+        pJ.get(0).getChildObject().get(11).translateObject(0.57f, -0.5f, 0.35f);
+
+        //sepatu
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(   0.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.09f, 0.05f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(12).translateObject(0.43f, -0.7f, 0.0f);
+        //sepatu
+        pJ.get(0).getChildObject().add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(   0.0f, 0.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.09f, 0.05f, 0.0f,
+                30, 15, 8
+        ));
+        pJ.get(0).getChildObject().get(13).translateObject(0.66f, -0.7f, 0.0f);
+
     }
 
     public void input() {
@@ -950,6 +1485,78 @@ public class MainProject {
 
 
         //ISI COMMENT MAU APA AJA
+
+        if(window.isKeyPressed(GLFW_KEY_J)) {
+//            camera.moveBackwards(0.01f);
+            pJ.get(0).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(0).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(1).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(2).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(3).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(4).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(5).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(6).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(7).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(8).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(9).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(10).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(11).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(12).translateObject(0.001f, 0.0f, 0.0f);
+            pJ.get(0).getChildObject().get(13).translateObject(0.001f, 0.0f, 0.0f);
+
+
+            if (window.isKeyPressed(GLFW_KEY_K)) {
+                for (Sphere2 i : pJ) {
+                    i.rotateObject(0.01f, 1f, 0f, 0f);
+                    Vector3f semua = pJ.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+                    pJ.get(0).getChildObject().get(0).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(1).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(2).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(3).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(4).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(5).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(6).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(7).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(8).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(9).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(10).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(11).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(12).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(13).translateObject(-semua.x, -semua.y, 0.0f);
+                    pJ.get(0).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(0).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(1).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(2).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(3).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(4).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(5).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(6).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(7).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(8).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(9).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(10).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(11).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(12).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(13).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+                    pJ.get(0).getChildObject().get(0).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(1).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(2).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(3).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(4).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(5).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(6).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(7).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(8).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(9).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(10).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(11).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(12).translateObject(semua.x, semua.y, 0.0f);
+                    pJ.get(0).getChildObject().get(13).translateObject(semua.x, semua.y, 0.0f);
+
+                }
+            }
+        }
+
         if(window.isKeyPressed(GLFW_KEY_F)){
             Vector3f head = pH.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
             pH.get(1).translateObject(-head.x, -head.y, 0.0f);
@@ -1466,23 +2073,23 @@ public class MainProject {
 //            camera.moveForward(0.001f);
         }
 
-        if(window.isKeyPressed(GLFW_KEY_J)){
-            Vector3f body = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
-            Vector3f bahu1 = pY.get(4).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
-            Vector3f bahu2 = pY.get(5).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
-            pY.get(4).translateObject(-body.x, -body.y, 0.0f);
-            pY.get(5).translateObject(-body.x, -body.y, 0.0f);
-            pY.get(4).rotateObject((float) Math.toRadians(0.5f), 1.0f, 0.0f, 0.0f);
-            pY.get(5).rotateObject((float) Math.toRadians(0.5f), -1.0f, 0.0f, 0.0f);
-            pY.get(4).translateObject(body.x, body.y, 0.0f);
-            pY.get(5).translateObject(body.x, body.y, 0.0f);
-            pY.get(11).translateObject(-body.x, -body.y, 0.0f);
-            pY.get(12).translateObject(-body.x, -body.y, 0.0f);
-            pY.get(11).rotateObject((float) Math.toRadians(0.5f), 1.0f, 0.0f, 0.0f);
-            pY.get(12).rotateObject((float) Math.toRadians(0.5f), -1.0f, 0.0f, 0.0f);
-            pY.get(11).translateObject(body.x, body.y, 0.0f);
-            pY.get(12).translateObject(body.x, body.y, 0.0f);
-        }
+//        if(window.isKeyPressed(GLFW_KEY_J)){
+//            Vector3f body = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+//            Vector3f bahu1 = pY.get(4).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+//            Vector3f bahu2 = pY.get(5).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+//            pY.get(4).translateObject(-body.x, -body.y, 0.0f);
+//            pY.get(5).translateObject(-body.x, -body.y, 0.0f);
+//            pY.get(4).rotateObject((float) Math.toRadians(0.5f), 1.0f, 0.0f, 0.0f);
+//            pY.get(5).rotateObject((float) Math.toRadians(0.5f), -1.0f, 0.0f, 0.0f);
+//            pY.get(4).translateObject(body.x, body.y, 0.0f);
+//            pY.get(5).translateObject(body.x, body.y, 0.0f);
+//            pY.get(11).translateObject(-body.x, -body.y, 0.0f);
+//            pY.get(12).translateObject(-body.x, -body.y, 0.0f);
+//            pY.get(11).rotateObject((float) Math.toRadians(0.5f), 1.0f, 0.0f, 0.0f);
+//            pY.get(12).rotateObject((float) Math.toRadians(0.5f), -1.0f, 0.0f, 0.0f);
+//            pY.get(11).translateObject(body.x, body.y, 0.0f);
+//            pY.get(12).translateObject(body.x, body.y, 0.0f);
+//        }
         if(window.isKeyPressed(GLFW_KEY_W)){
             pZ.get(0).translateObject(0.0f, 0.0f, 0.008f);
             pZ.get(1).translateObject(0.0f, 0.0f, 0.008f);
@@ -1496,6 +2103,14 @@ public class MainProject {
             pZ.get(2).translateObject(0.0f, 0.0f, -0.008f);
             pZ.get(3).translateObject(0.0f, 0.0f, -0.008f);
         }
+
+        if(window.isKeyPressed(GLFW_KEY_D)){
+            camera.moveRight(0.01f);
+        }
+
+        if(window.isKeyPressed(GLFW_KEY_A)){
+            camera.moveLeft(0.01f);
+        }
     }
 
     public void loop() {
@@ -1505,13 +2120,13 @@ public class MainProject {
             glClearColor(0.152f, 0.96f, 0.235f, 1.0f); // RapidTables.com (RGB color code chart)
             GL.createCapabilities();
             input();
-//            for (Sphere2 object : TTSRY) {
-//                object.draw(camera, projection);
-//            }
             for(Sphere2 obj : pY){
                 obj.draw(camera, projection);
             }
             for(Sphere2 obj : pH){
+                obj.draw(camera, projection);
+            }
+            for(Sphere2 obj : pJ){
                 obj.draw(camera, projection);
             }
             for(Object2d obj : pZ){
