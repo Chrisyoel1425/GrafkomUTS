@@ -48,10 +48,11 @@ public class MainProject {
                 new Vector4f(1.0f, 0.0f, 0.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
-                0.15f, 0.3f, 0.15f,
+                0.15f, 0.25f, 0.15f,
                 30, 15, 1
         ));
         pY.get(0).translateObject(0.0f, 0.18f, 0.0f);
+
 
         pY.add(new Sphere2(
                 Arrays.asList(
@@ -132,6 +133,70 @@ public class MainProject {
                 30, 15, 9
         ));
         pY.get(5).translateObject(-0.08f, 0.21f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.0f, 0.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.15f, 0.05f, 0.15f,
+                30, 15, 1
+        ));
+        pY.get(6).translateObject(0.0f, 0.03f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 0.0f, 1.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.075f, 0.15f, 0.1f,
+                30, 15, 1
+        ));
+        pY.get(7).translateObject(-0.035f, -0.07f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.075f, 0.15f, 0.1f,
+                30, 15, 1
+        ));
+        pY.get(8).translateObject(0.039f, -0.07f, 0.0f);
+
+        pY.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1.0f, 1.0f, 0.0f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                0.5f, 0.5f, 0.5f,
+                30, 15, 1
+        ));
+        pY.get(9).translateObject(0.0f, 0.0f, -2f);
     }
 
     public void input() {
@@ -162,26 +227,55 @@ public class MainProject {
             pY.get(3).translateObject(-body.x, -body.y, 0.0f);
             pY.get(4).translateObject(-body.x, -body.y, 0.0f);
             pY.get(5).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(6).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(7).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(8).translateObject(-body.x, -body.y, 0.0f);
             pY.get(0).translateObject(0.001f, 0.0f, 0.0f);
             pY.get(1).translateObject(0.001f, 0.0f, 0.0f);
             pY.get(2).translateObject(0.001f, 0.0f, 0.0f);
             pY.get(3).translateObject(0.001f, 0.0f, 0.0f);
             pY.get(4).translateObject(0.001f, 0.0f, 0.0f);
             pY.get(5).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(6).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(7).translateObject(0.001f, 0.0f, 0.0f);
+            pY.get(8).translateObject(0.001f, 0.0f, 0.0f);
             pY.get(1).translateObject(body.x, body.y, 0.0f);
             pY.get(2).translateObject(body.x, body.y, 0.0f);
             pY.get(3).translateObject(body.x, body.y, 0.0f);
             pY.get(4).translateObject(body.x, body.y, 0.0f);
             pY.get(5).translateObject(body.x, body.y, 0.0f);
+            pY.get(6).translateObject(body.x, body.y, 0.0f);
+            pY.get(7).translateObject(body.x, body.y, 0.0f);
+            pY.get(8).translateObject(body.x, body.y, 0.0f);
         }
         if(window.isKeyPressed(GLFW_KEY_H)){
             Vector3f body = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
             pY.get(4).translateObject(-body.x, -body.y, 0.0f);
             pY.get(5).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(6).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(7).translateObject(-body.x, -body.y, 0.0f);
+            pY.get(8).translateObject(-body.x, -body.y, 0.0f);
             pY.get(4).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
             pY.get(5).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(6).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(7).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(8).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
             pY.get(4).translateObject(body.x, body.y, 0.0f);
             pY.get(5).translateObject(body.x, body.y, 0.0f);
+            pY.get(6).translateObject(body.x, body.y, 0.0f);
+            pY.get(7).translateObject(body.x, body.y, 0.0f);
+            pY.get(8).translateObject(body.x, body.y, 0.0f);
+        }
+        if(window.isKeyPressed(GLFW_KEY_I)){
+//            pY.get(1).rotateObject((float) Math.toRadians(0.5f),1f,0.0f,0.0f);
+            Vector3f head = pY.get(1).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+            pY.get(2).translateObject(-head.x, -head.y, 0.0f);
+            pY.get(3).translateObject(-head.x, -head.y, 0.0f);
+            pY.get(2).rotateObject((float) Math.toRadians(0.5f), 1.0f, 0.0f, 0.0f);
+            pY.get(3).rotateObject((float) Math.toRadians(0.5f), 1.0f, 0.0f, 0.0f);
+            pY.get(2).translateObject(head.x, head.y, 0.0f);
+            pY.get(3).translateObject(head.x, head.y, 0.0f);
+//            camera.moveForward(0.001f);
         }
     }
 

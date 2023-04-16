@@ -48,12 +48,10 @@ public class coba {
                 new Vector4f(1.0f, 0.0f, 0.0f, 1.0f),
                 0.5,
                 new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
-                0.2f, 0.2f, 0.2f,
-                30, 15, 9
+                0.15f, 0.3f, 0.15f,
+                30, 15, 1
         ));
-        pY.get(0).translateObject(0.0f, -0.5f, 0.0f);
-//        pY.get(0).rotateObject((float) Math.toRadians(90f), 0.0f, 1.0f, 0.0f);
-
+        pY.get(0).translateObject(0.0f, 0.18f, 0.0f);
     }
 
     public void input() {
@@ -66,7 +64,14 @@ public class coba {
 
         //ISI COMMENT MAU APA AJA
         if(window.isKeyPressed(GLFW_KEY_G)){
-            pY.get(0).rotateObject((float) Math.toRadians(0.5f), 0.0f, 0.5f, 0.0f);
+            Vector3f cek = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
+            if(cek.y <= 0.15f && cek.y >= -0.1f){
+                pY.get(0).rotateObject((float) Math.toRadians(0.5f), 0.0f, 0.0f, -0.5f);
+            }
+            else{
+                pY.get(0).rotateObject((float) Math.toRadians(0.5f), 0.0f, 0.0f, 0.5f);
+            }
+
         }
         if(window.isKeyPressed(GLFW_KEY_H)){
             camera.moveBackwards(0.002f);
