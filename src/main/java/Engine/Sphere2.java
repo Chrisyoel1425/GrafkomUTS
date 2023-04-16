@@ -60,6 +60,9 @@ public class Sphere2 extends Circle3d{
         else if(pilihan == 9){
             createSphere3();
         }
+        else if(pilihan == 10){
+            createSphere4();
+        }
         //createSphere();
         //createHyperboloid1();
         //createHyperboloid2();
@@ -216,7 +219,22 @@ public class Sphere2 extends Circle3d{
                 vertices.add(temp_vector);
             }
         }
+    }
 
+    public void createSphere4(){
+        vertices.clear();
+
+        for (float u = 180; u >= -180; u -= 180 / 30) {
+            for (float v = -90; v <= 0; v += 180 / 30) {
+                Vector3f temp_vector = new Vector3f();
+                float uRad = (float) Math.toRadians(u);
+                float vRad = (float) Math.toRadians(v);
+                temp_vector.x = (float) (this.rX * Math.cos(vRad) * Math.cos(uRad));
+                temp_vector.z = (float) (this.rZ * Math.cos(vRad) * Math.sin(uRad));
+                temp_vector.y = (float) (this.rY * Math.sin(vRad));
+                vertices.add(temp_vector);
+            }
+        }
     }
 
     public void createHyperboloid1() {
