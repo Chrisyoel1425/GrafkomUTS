@@ -12,12 +12,20 @@ public class Circle2 extends Object2d {
 
     Float radiusX;
     Float radiusY;
-    public Circle2(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color, List<Float> centerPoint, Float radiusX,Float radiusY) {
+    public Circle2(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color, List<Float> centerPoint, Float radiusX,Float radiusY, int pilihan) {
         super(shaderModuleDataList, vertices, color);
         this.setCenterPoint(centerPoint);
         this.radiusX = radiusX;
         this.radiusY = radiusY;
-        createCircle();
+        if(pilihan == 1){
+            createCircle();
+        }
+        else if(pilihan == 2){
+            createRectangle();
+        }
+        else if(pilihan == 3){
+            createTriangle();
+        }
         setupVAOVBO();
     }
     public double degToRad(float degree){
