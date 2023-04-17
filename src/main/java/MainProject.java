@@ -347,6 +347,22 @@ public class MainProject {
         ));
         pZ.get(3).getChildObject().get(0).translateObject(-0.925f, 0.8f, -4.0f);
 
+        pZ.add(new Sphere2(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "resources/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.734f, 0.502f, 0.662f, 1.0f),
+                0.5,
+                new ArrayList<>(List.of(0.0f, 0.0f, 0.0f)),
+                10f, 10f, 10f,
+                30, 15, 1
+        ));
+        pZ.get(4).translateObject(0.0f, -5.0f, -10f);
+
         //YOEL
         //KEPALA
         pY.add(new Sphere2(
