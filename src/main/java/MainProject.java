@@ -1464,26 +1464,30 @@ public class MainProject {
 
         if(window.isKeyPressed(GLFW_KEY_P)){
             Vector3f head = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
-            pY.get(1).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(1).translateObject(-head.x, -head.y, 0.0f);
             pY.get(2).translateObject(-head.x, -head.y, 0.0f);
             pY.get(3).translateObject(-head.x, -head.y, 0.0f);
             pY.get(4).translateObject(-head.x, -head.y, 0.0f);
+            pY.get(1).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
             pY.get(2).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
             pY.get(3).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
             pY.get(4).rotateObject((float) Math.toRadians(0.5f), 0.0f, 1f, 0.0f);
+            pY.get(1).translateObject(head.x, head.y, 0.0f);
             pY.get(2).translateObject(head.x, head.y, 0.0f);
             pY.get(3).translateObject(head.x, head.y, 0.0f);
             pY.get(4).translateObject(head.x, head.y, 0.0f);
         }
         if(window.isKeyPressed(GLFW_KEY_O)){
             Vector3f head = pY.get(0).getModel().transformPosition(new Vector3f(0.0f, 0.0f, 0.0f));
-            pY.get(1).rotateObject((float) Math.toRadians(0.5f), 0.0f, -1f, 0.0f);
+            pY.get(1).translateObject(-head.x, -head.y, 0.0f);
             pY.get(2).translateObject(-head.x, -head.y, 0.0f);
             pY.get(3).translateObject(-head.x, -head.y, 0.0f);
             pY.get(4).translateObject(-head.x, -head.y, 0.0f);
+            pY.get(1).rotateObject((float) Math.toRadians(0.5f), 0.0f, -1f, 0.0f);
             pY.get(2).rotateObject((float) Math.toRadians(0.5f), 0.0f, -1f, 0.0f);
             pY.get(3).rotateObject((float) Math.toRadians(0.5f), 0.0f, -1f, 0.0f);
             pY.get(4).rotateObject((float) Math.toRadians(0.5f), 0.0f, -1f, 0.0f);
+            pY.get(1).translateObject(head.x, head.y, 0.0f);
             pY.get(2).translateObject(head.x, head.y, 0.0f);
             pY.get(3).translateObject(head.x, head.y, 0.0f);
             pY.get(4).translateObject(head.x, head.y, 0.0f);
